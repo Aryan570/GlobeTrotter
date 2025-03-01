@@ -1,7 +1,7 @@
 ### Life (Globetrotter)
-> Built with NextJS
+> Built with NextJS & MongoDB
 
-~~Video Demo link here~~
+Demo Link : *https://drive.google.com/file/d/1SX23ANiQzsC3CoOzNqt6r_qWZhfuDTJg/view?usp=sharing*
 
 Link to the Deployed Version : *https://globe-trotter-topaz.vercel.app/*
 
@@ -24,3 +24,13 @@ yarn dev
 See my other respositories, I&apos;m currently building a turn-based game, but I'm building backend in Rust and frontend in Rust.
 NextJS provide so much functionality that you don&apos;t have to worry about yourself.
 You can move very fast with NextJS.
+
+#### How challenge feature works
+When the game completes, you have the option to challenge friends to beat your score. For that you&apos;ll need to choose a username.
+> if username is already in DB, choose a different name
+
+A link will be generated for the friend. Link has a simple format actually
+**..com/challenge/{username}**
+>Is it too simple? It will not matter at all, you can&apos;t do anything wrong with this info.
+
+Once your friend visit the page and play the game. The result of the match will be displayed to your friend.
