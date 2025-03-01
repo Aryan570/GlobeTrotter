@@ -3,8 +3,7 @@ import { destinations } from '@/data/destinations';
 
 export async function POST(request: Request) {
   const { id, guess } = await request.json();
-  const destination = destinations.find((dest) => dest.id === id);
-
+  const destination = destinations[parseInt(id,10) - 1];
   if (!destination) {
     return NextResponse.json({ error: 'Destination not found' }, { status: 404 });
   }

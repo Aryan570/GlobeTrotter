@@ -13,7 +13,9 @@ yarn dev
 ```
 #### About
 You get 10 turns to guess the city throught the clues.
-You'll get score out of 10.
+
+You&pos;ll get score out of 10.
+
 In the end of the game , you can challenge your friends to beat your score.
 >Invite is valid for only 24 hours, (I don&apos;t want to fill my database : )
 
