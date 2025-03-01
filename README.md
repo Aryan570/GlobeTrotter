@@ -2,6 +2,7 @@
 > Built with NextJS
 
 ~~Video Demo link here~~
+
 Link to the Deployed Version : *https://globe-trotter-topaz.vercel.app/*
 
 #### Run Locally
@@ -12,11 +13,9 @@ yarn install
 yarn dev
 ```
 #### About
-You get 10 turns to guess the city throught the clues.
-
-You&pos;ll get score out of 10.
-
-In the end of the game , you can challenge your friends to beat your score.
+- You get 10 turns to guess the city throught the clues.
+- You&apos;ll get score out of 10.
+- In the end of the game , you can challenge your friends to beat your score.
 >Invite is valid for only 24 hours, (I don&apos;t want to fill my database : )
 
 #### Why NextJS
