@@ -37,7 +37,6 @@ export const UserRegistration: React.FC<UserRegistrationProps> = ({ score }) => 
     } catch (e: unknown) {
       if (e instanceof Error) setError(e.message);
       else setError("An unknown error occurred");
-      setLoading(false);
     } finally {
       setLoading(false);
     }
