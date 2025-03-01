@@ -91,7 +91,7 @@ export default function Challenge({ slug }: { slug: string }) {
                     <div className='fixed inset-0 pointer-events-none overflow-hidden'><Confetti /></div>
                     <h1 className="text-2xl font-bold">Globetrotter Challenge</h1>
                     <p className="mt-2">Score: {score.correct} Correct, {score.incorrect} Incorrect</p>
-                    {score.correct >= friend!.score ? <p className='text-green-500'>New God is born!</p> : <p className='text-red-500'>Couldn&apos;t beat {friend?.username}, lol</p>}
+                    {score.correct >= friend!.score ? <p className='text-green-500'>{score.correct != friend!.score ? "New God is born!" : "Boo! A Tie"}</p> : <p className='text-red-500'>Couldn&apos;t beat {friend?.username}, lol</p>}
                     <button className='mt-2 cursor-pointer' onClick={
                         () => {
                             setover(false);
