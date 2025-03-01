@@ -22,8 +22,13 @@ export const UserRegistration: React.FC<UserRegistrationProps> = ({ score }) => 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+    const result = await createUserProfile(username, score);
+    if (result.error) {
+      setError(result.error.message);
+      setLoading(false);
+      return;
+    }
     try {
-      await createUserProfile(username, score);
       const image = await generateShareImage(score, username!);
       localStorage.setItem('username', username);
       setshare(true);
@@ -32,6 +37,8 @@ export const UserRegistration: React.FC<UserRegistrationProps> = ({ score }) => 
     } catch (e: unknown) {
       if (e instanceof Error) setError(e.message);
       else setError("An unknown error occurred");
+      setLoading(false);
+    } finally {
       setLoading(false);
     }
   };

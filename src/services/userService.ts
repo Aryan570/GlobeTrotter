@@ -7,18 +7,34 @@ export interface UserProfile {
   score: number;
 }
 
+export type UserError = {
+  message: string;
+  code: 'INVALID_USERNAME' | 'USERNAME_EXISTS';
+};
+
 // const profiles = new Map<string, UserProfile>();
 
-export const createUserProfile = async (username: string, score : number): Promise<void> => {
+export const createUserProfile = async (username: string, score : number): Promise<{error? : UserError}> => {
   if(/[^a-zA-Z0-9_]/.test(username)){
-    throw new Error('Invalid username');
+    return { 
+      error: {
+        code: 'INVALID_USERNAME',
+        message: 'Invalid username'
+      }
+    };
   }
   const {db} = await connectToDatabase();
   const doc = await db.collection('life').findOne({username: username});
   if (doc) {
-    throw new Error('Username already exists');
+    return {
+      error: {
+        code: 'USERNAME_EXISTS',
+        message: 'Username already exists'
+      }
+    };
   }
   await db.collection('life').insertOne({username: username, score: score, createdAt: new Date()});
+  return {};
 };
 
 // export const updateScore = (username: string, score: number): void => {
