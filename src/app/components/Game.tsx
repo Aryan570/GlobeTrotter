@@ -100,7 +100,7 @@ export default function Game() {
                 <div className=' col-start-3 col-span-2 row-start-1 row-span-2'>
                     <button
                         key={0}
-                        className="h-full w-full text-white p-2 rounded hover:bg-blue-600 transition ml-2"
+                        className="h-full w-full p-2 rounded hover:bg-blue-600 transition ml-2"
                         onClick={() => handleGuess(destination!.options[0])}
                         disabled={disable}
                     >
@@ -110,7 +110,7 @@ export default function Game() {
                 <div className='col-start-5 col-span-2 row-start-1 row-span-2'>
                     <button
                         key={1}
-                        className=" h-full w-full text-white rounded p-2 hover:bg-blue-600 transition"
+                        className=" h-full w-full  rounded p-2 hover:bg-blue-600 transition"
                         onClick={() => handleGuess(destination!.options[1])}
                         disabled={disable}
                     >
@@ -120,7 +120,7 @@ export default function Game() {
                 <div className='col-start-3 col-span-2 row-start-3 row-span-2 mb-3'>
                     <button
                         key={2}
-                        className=" h-full w-full text-white p-2 rounded hover:bg-blue-600 transition ml-2"
+                        className=" h-full w-full  p-2 rounded hover:bg-blue-600 transition ml-2"
                         onClick={() => handleGuess(destination!.options[2])}
                         disabled={disable}
                     >
@@ -130,7 +130,7 @@ export default function Game() {
                 <div className='col-start-5 col-span-2 row-start-3 row-span-2 mb-3'>
                     <button
                         key={3}
-                        className=" h-full w-full text-white p-2 rounded hover:bg-blue-600 transition"
+                        className=" h-full w-full  p-2 rounded hover:bg-blue-600 transition"
                         onClick={() => handleGuess(destination!.options[3])}
                         disabled={disable}
                     >
@@ -150,7 +150,7 @@ export default function Game() {
                 )}
                 <button
                     onClick={fetchDestination}
-                    className=" border-l-2 border-t-2 text-white p-2 rounded hover:bg-green-600 transition col-start-6 col-span-1 row-start-5 row-span-1 flex justify-center items-center"
+                    className=" border-l-2 border-t-2  p-2 rounded hover:bg-green-600 transition col-start-6 col-span-1 row-start-5 row-span-1 flex justify-center items-center"
                     disabled={feedback ? false : true}
                 >
                     <MoveRight />
